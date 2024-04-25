@@ -1,11 +1,17 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
+
+    const {user, logOut, loading} = useContext(AuthContext) ;
+
     const navlink = (
         <>
             <li>
                 <NavLink className="font-medium" to={"/"}>Home</NavLink>
-            </li> 
+            </li>
             <li>
                 <NavLink className="font-medium" to={"/all-spot"}>All Tourists Spot</NavLink>
             </li>
@@ -17,6 +23,17 @@ const Navbar = () => {
             </li>
         </>
     )
+
+    const handleSignOut = () => {
+        logOut()
+        .then(result=> {
+          toast.success('Logout successful')
+          console.log(result.user);
+        })
+        .catch(error=> {
+          console.log(error);
+        })
+      }
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -35,13 +52,24 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                        {
-                            navlink
-                        }
+                    {
+                        navlink
+                    }
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                {!user &&
+                    <div className="space-x-5">
+                        <Link to={'/register'} className="btn bg-[#E46D30] text-white hover:bg-[#5489C8]">Register</Link>
+                        <Link to={'/login'} className="btn bg-[#E46D30] text-white hover:bg-[#5489C8]">Login</Link>
+                    </div>
+                }
+                {
+                    user && 
+                    <div>
+                        <button onClick={handleSignOut} className="btn btn-accent">Log Out </button>
+                    </div>
+                }
             </div>
         </div>
     );
