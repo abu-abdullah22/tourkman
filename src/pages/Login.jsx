@@ -3,6 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
+import 'animate.css';
 
 const Login = () => {
     const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
@@ -63,13 +64,10 @@ const Login = () => {
             })
     }
     return (
-        <div>
+        <div className="bg-[url('/public/login.jpg')] bg-cover bg-center rounded-lg my-4">
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                    </div>
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 bg-[#EEF0F8]">
+                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100  animate__animated animate__backInDown bg-[#EEF0F8]">
                         <form className="card-body" onSubmit={hanldeLogin}>
                             <div className="form-control">
                                 <label className="label">

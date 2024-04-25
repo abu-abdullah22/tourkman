@@ -55,11 +55,11 @@ const Register = () => {
        
       }   
     return (
-        <div className="bg-[url('/public/register.jpg')]">
+        <div className="bg-[url('/public/register.jpg')] rounded-lg my-4">
     
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col">
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 bg-[#EEF0F8] animate__animated animate__bounce">
+                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 bg-[#EEF0F8] animate__animated animate__backInUp">
                         <form className="card-body" onSubmit={handleRegister} >
                             <div className="form-control">
                                 <label className="label">

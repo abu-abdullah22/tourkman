@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 const Navbar = () => {
 
-    const {user, logOut, loading} = useContext(AuthContext) ;
+    const { user, logOut} = useContext(AuthContext);
 
     const navlink = (
         <>
@@ -26,16 +26,16 @@ const Navbar = () => {
 
     const handleSignOut = () => {
         logOut()
-        .then(result=> {
-          toast.success('Logout successful')
-          console.log(result.user);
-        })
-        .catch(error=> {
-          console.log(error);
-        })
-      }
+            .then(result => {
+                toast.success('Logout successful')
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 mt-3">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,7 +48,7 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <Link to={'/'} className="btn btn-ghost text-3xl">TourMan</Link>
+                <Link to={'/'} className="btn bg-[#795D5A] text-white text-3xl hover:bg-[#80665F]">TourMan</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -64,12 +64,12 @@ const Navbar = () => {
                         <Link to={'/login'} className="btn bg-[#E46D30] text-white hover:bg-[#5489C8]">Login</Link>
                     </div>
                 }
-                {
-                    user && 
-                    <div>
-                        <button onClick={handleSignOut} className="btn btn-accent">Log Out </button>
+               { user && <div className="flex items-center" >
+                    <div className=" tooltip tooltip-left mr-3 border-2 p-1 rounded-full border-[#795D5A]" data-tip={user.displayName || 'user'}>
+                        <img src={user?.photoURL || '/user.jpg'} className="w-[50px] h-[50px] rounded-full" alt="" />
                     </div>
-                }
+                    <button onClick={handleSignOut} className="btn bg-[#E46D30] text-white hover:bg-[#5489C8]">Log Out </button>
+                </div> }
             </div>
         </div>
     );
