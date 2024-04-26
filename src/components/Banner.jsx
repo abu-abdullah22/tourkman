@@ -7,7 +7,7 @@ import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 import 'animate.css';
 const Banner = () => {
     return (
-        <div className='my-4 bg-[#80665F] rounded-lg mx-10 lg:mx-0'>
+        <div className='my-4 bg-[#80665FCC] rounded-lg mx-10 lg:mx-0 italic'>
              <Swiper
         effect={'coverflow'}
         grabCursor={true}
