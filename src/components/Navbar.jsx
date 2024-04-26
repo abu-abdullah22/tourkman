@@ -48,7 +48,7 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <Link to={'/'} className="btn bg-[#79A79A] text-white text-3xl hover:bg-[#80665F]">TourMan</Link>
+                <Link to={'/'} className="btn bg-[#79A79A] text-white text-3xl hover:bg-[#80665F] italic">TourMan</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

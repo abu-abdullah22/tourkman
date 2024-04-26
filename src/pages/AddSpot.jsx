@@ -1,7 +1,62 @@
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../provider/AuthProvider";
+import Swal from 'sweetalert2'
+
 const AddSpot = () => {
+    const {user} = useContext(AuthContext) ;
+    const [name, setName] = useState('') ;
+    const [email, setEmail] = useState('');
+
+   useEffect(()=> {
+    if(user) {
+        setName(user.displayName);
+        setEmail(user.email) ;
+    }
+   },[user])
+
+    const handleAddSpot = e => {
+        e.preventDefault() ;
+
+        const form = e.target ;
+        const spotName = form.spotName.value ;
+        const country = form.country.value ;
+        const location = form.location.value ;
+        const cost = form.cost.value ;
+        const season = form.season.value ;
+        const time = form.time.value ;
+        const visitors = form.visitors.value ;
+        const description = form.description.value ;
+        const photo = form.photo.value ;
+
+        const spotAdded = {spotName, country, location, cost, season, time, visitors, description, name, email, photo} ;
+        // console.log(spotAdded);
+
+
+        //sending to the server
+        fetch('http://localhost:5000/spots', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(spotAdded)
+        })
+        .then(res=> res.json()) 
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Successfully Added',
+                    icon: 'success',
+                    confirmButtonText: 'Close'
+                  })
+            }
+        })
+
+    }
     return (
         <div className="my-12">
-            <form className="bg-[#F4F3F0] p-5">
+            <form className="bg-[#F4F3F0] p-5" onSubmit={handleAddSpot}>
                 {/* spot and country */}
                 <div className="md:flex gap-4">
                     <div className="form-contro w-1/2">
@@ -89,7 +144,7 @@ const AddSpot = () => {
                     </div>
                 </div>
 
-                {/* Total visitors and description */}
+                {/* Name and Email */}
                 <div className="md:flex gap-4">
 
                 <div className="form-control w-1/2">
@@ -97,7 +152,7 @@ const AddSpot = () => {
                             <span className="label-text">Your Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="userName" placeholder="Name" className="input input-bordered w-full" />
+                            <input type="text" name="userName" placeholder="Name" value={name} className="input input-bordered w-full" />
                         </label>
 
                     </div>
@@ -106,7 +161,7 @@ const AddSpot = () => {
                             <span className="label-text">Your Email</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="email" placeholder="Email" className="input input-bordered w-full" />
+                            <input type="text" value={email} name="email" placeholder="Email" className="input input-bordered w-full" />
                         </label>
 
                     </div>

@@ -36,9 +36,6 @@ const Register = () => {
             updateUser(Name, Photo)
             .then(()=> {
               setUser({displayName: Name, photoURL: Photo}) ;
-             
-        
-      
             }) 
             .catch(error=>{
              console.log('Registration Failed',error);
