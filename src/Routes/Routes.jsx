@@ -7,6 +7,7 @@ import MyList from "../pages/MyList";
 import AddSpot from "../pages/AddSpot";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
+import SpotDetails from "../pages/SpotDetails";
 
 export const router = createBrowserRouter([
     {
@@ -37,6 +38,11 @@ export const router = createBrowserRouter([
         {
             path: '/login',
             element: <Login></Login>
+        },
+        {
+            path: '/details/:id',
+            element: <SpotDetails></SpotDetails>,
+            loader: ()=> fetch('http://localhost:5000/spots')
         }
       ]
     },
