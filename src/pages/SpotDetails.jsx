@@ -4,17 +4,17 @@ import { useLoaderData, useParams } from "react-router-dom";
 const SpotDetails = () => {
 
     const { id } = useParams();
-    console.log(id);
+    // console.log(id);
 
     const spots = useLoaderData();
-    console.log(spots);
+    // console.log(spots);
     const spot = spots.find(spot => spot._id === id);
-    console.log(spot);
+    // console.log(spot);
     const {spotName, country, location, cost, season, time, visitors, description, photo} = spot ;
 
 
     return (
-        <div className="hero min-h-[95vh] bg-base-200">
+        <div className="hero min-h-[60vh] mb-32 mt-12 bg-base-200">
             <div className="hero-content flex-col lg:flex-row">
                 <img src={photo} className="max-w-sm rounded-lg shadow-2xl" />
                 <div>
