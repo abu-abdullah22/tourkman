@@ -152,7 +152,7 @@ const AddSpot = () => {
                             <span className="label-text">Your Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="userName" placeholder="Name" value={name} className="input input-bordered w-full" />
+                            <input type="text" name="userName" placeholder="Name" defaultValue={name} className="input input-bordered w-full" />
                         </label>
 
                     </div>
@@ -161,7 +161,7 @@ const AddSpot = () => {
                             <span className="label-text">Your Email</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" value={email} name="email" placeholder="Email" className="input input-bordered w-full" />
+                            <input type="text" defaultValue={email} name="email" placeholder="Email" className="input input-bordered w-full" />
                         </label>
 
                     </div>

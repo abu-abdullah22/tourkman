@@ -8,11 +8,14 @@ import AddSpot from "../pages/AddSpot";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import SpotDetails from "../pages/SpotDetails";
+import PrivateRoute from "../pages/PrivateRoute";
+import Error from "../pages/Error";
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <Error></Error>,
       children : [
         {
             path: '/',
@@ -21,15 +24,16 @@ export const router = createBrowserRouter([
         },
         {
             path: '/all-spot',
-            element: <AllTourist></AllTourist>
+            element: <AllTourist></AllTourist>,
+            loader: ()=> fetch('http://localhost:5000/spots')
         },
         {
             path: '/my-list',
-            element: <MyList></MyList>
+            element: <PrivateRoute> <MyList></MyList></PrivateRoute>
         },
         {
             path: '/add-spot',
-            element: <AddSpot></AddSpot>
+            element: <PrivateRoute><AddSpot></AddSpot></PrivateRoute>
         },
         {
             path: "/register",
@@ -41,7 +45,7 @@ export const router = createBrowserRouter([
         },
         {
             path: '/details/:id',
-            element: <SpotDetails></SpotDetails>,
+            element: <PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>,
             loader: ()=> fetch('http://localhost:5000/spots')
         }
       ]

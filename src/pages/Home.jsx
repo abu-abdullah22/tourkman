@@ -12,7 +12,7 @@ const Home = () => {
                 <h2 className="text-4xl text-center my-12">Tourist Spots </h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 
              gap-5 mx-3 lg:container lg:mx-auto">
-                    {spots.map(spot => <TouristSpots key={spot._id} spot={spot}></TouristSpots>)}
+                    {spots.slice(0,6).map(spot => <TouristSpots key={spot._id} spot={spot}></TouristSpots>)}
                 </div>
             </div>
         </div>
