@@ -62,7 +62,7 @@ const MyList = () => {
     }
 
     return (
-      <div className="h-[70vh]">
+      <div className="h-[70vh] my-20">
         <h2 className="text-4xl text-center my-12 italic">My List </h2>
           <div className="overflow-x-auto">
             <table className="table">

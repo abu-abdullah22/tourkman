@@ -14,7 +14,7 @@ const SpotDetails = () => {
 
 
     return (
-        <div className="hero min-h-[60vh] mb-32 mt-12 bg-base-200">
+        <div className="hero min-h-[60vh] mt-40 md:mt-12 bg-base-200">
             <div className="hero-content flex-col lg:flex-row">
                 <img src={photo} className="max-w-sm rounded-lg shadow-2xl" />
                 <div>
@@ -23,7 +23,7 @@ const SpotDetails = () => {
                     <p className="py-6">{description}</p>
 
                     <div className="flex gap-10">
-                        <p>Average Cost : {cost} </p>
+                        <p>Average Cost in USD: {cost} </p>
                         <p>Time: {time}</p>
                     </div>
 

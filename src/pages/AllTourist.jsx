@@ -26,7 +26,7 @@ const AllTourist = () => {
     return (
         <div>
             <h2 className="text-4xl text-center my-12 italic">All Tourist Spots </h2>
-            <details className="dropdown">
+            <details className="dropdown mt-12">
                 <summary className="m-1 btn bg-[#5489C8] text-white hover:bg-[#E46D30]">Sort By: {sortOption === 'cost' ? 'Cost' : 'Default'}</summary>
                 <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                     <li>
@@ -38,7 +38,7 @@ const AllTourist = () => {
                 </ul>
             </details>
             <div className="grid grid-cols-1 lg:grid-cols-2 
-             gap-5 mx-3 lg:container lg:mx-auto">
+             gap-5 mx-3 lg:container lg:mx-auto my-12">
                 {sortedSpots.map(spot => <TouristSpots key={spot._id} spot={spot}></TouristSpots>)}
             </div>
         </div>
