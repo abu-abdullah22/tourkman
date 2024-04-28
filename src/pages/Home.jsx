@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import TouristSpots from "../components/TouristSpots";
 import Faq from "../components/Faq";
 import Countries from "../components/Countries";
+import Subscribe from "../components/Subscribe";
 
 
 
@@ -25,6 +26,9 @@ const Home = () => {
             </div>
             <div>
                 <Countries></Countries>
+            </div>
+            <div>
+                <Subscribe></Subscribe>
             </div>
         </div>
     );

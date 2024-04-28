@@ -6,7 +6,7 @@ const Footer = () => {
           TourkMan
         </p>
         <p>Copyright © 2024 - All right reserved</p>
-        <p>Email: john.doe@example.com <br />
+        <p>Email: tourkman@email.com <br />
           Phone: +1 555 123-4567</p>
         
       </aside>
