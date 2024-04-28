@@ -28,7 +28,7 @@ const Countries = () => {
                 <h2 className="card-title">{country.country_name}</h2>
                 <p>{country.description}</p>
                 <div className="card-actions">
-                   <Link>  <button  className="btn bg-[#79A79A] hover:bg-[#80665F] text-white">View Details</button></Link>
+                   <Link to={`/countries/${country.country_name}`}>  <button  className="btn bg-[#79A79A] hover:bg-[#80665F] text-white">View Details</button></Link>
                 </div>
             </div>
         </div>

@@ -11,6 +11,7 @@ import SpotDetails from "../pages/SpotDetails";
 import PrivateRoute from "../pages/PrivateRoute";
 import Error from "../pages/Error";
 import Update from "../pages/Update";
+import CountryDetails from "../pages/CountryDetails";
 
 export const router = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ export const router = createBrowserRouter([
         {
             path: '/my-list/:email',
             element: <PrivateRoute> <MyList></MyList></PrivateRoute>,
-            loader: ({params})=> fetch(`http://localhost:5000/spots/email/${params.email}`) 
+            loader: ({params})=> fetch(`http://localhost:5000/email/${params.email}`) 
         },
         {
             path: '/add-spot',
@@ -55,6 +56,11 @@ export const router = createBrowserRouter([
             element: <PrivateRoute><Update></Update></PrivateRoute>,
             loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
 
+        },
+        {
+            path: '/countries/:country',
+            element: <CountryDetails></CountryDetails>,
+            loader: ({params})=> fetch(`http://localhost:5000/country/${params.country}`)
         }
       ]
     },

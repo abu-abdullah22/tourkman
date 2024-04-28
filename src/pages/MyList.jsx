@@ -11,7 +11,7 @@ const MyList = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/spots/email/${email}`)
+        fetch(`http://localhost:5000/email/${email}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch spots');
@@ -19,7 +19,8 @@ const MyList = () => {
                 return response.json();
             })
             .then(data => {
-                setSpots(data)
+                setSpots(data) ;
+                // console.log(data);
             })
             .catch(error => {
                 console.error('Error fetching spots:', error);
@@ -38,7 +39,7 @@ const MyList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/spots/email/${email}`, {
+                fetch(`http://localhost:5000/email/${email}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -61,7 +62,7 @@ const MyList = () => {
     }
 
     return (
-      <div>
+      <div className="h-[70vh]">
         <h2 className="text-4xl text-center my-12 italic">My List </h2>
           <div className="overflow-x-auto">
             <table className="table">

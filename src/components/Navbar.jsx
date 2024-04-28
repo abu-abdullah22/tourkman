@@ -117,7 +117,7 @@ const Navbar = () => {
                     </div>
                 }
                { user && <div className="flex items-center" >
-                    <div className=" tooltip tooltip-bottom mr-3 border-2 p-1 rounded-full border-[#795D5A]" data-tip={user.displayName || 'user'}>
+                    <div className=" hidden md:block tooltip tooltip-bottom mr-3 border-2 p-1 rounded-full border-[#795D5A]" data-tip={user.displayName || 'user'}>
                         <img src={user?.photoURL || '/user.jpg'} className="w-[50px] h-[50px] rounded-full" alt="" />
                     </div>
                     <button onClick={handleSignOut} className="btn bg-[#E46D30] text-white hover:bg-[#5489C8]">Log Out </button>
