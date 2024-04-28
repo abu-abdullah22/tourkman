@@ -36,8 +36,8 @@ const CountryDetails = () => {
                         countries.map(country => (
                             <div key={country._id}>
                                 <div className="card card-side shadow-xl md:w-[500px] md:h-[400px] h-[300px]  hover:scale-105 hover:cursor-pointer">
-                                    <figure><img src={country.photo} alt="spot" className="md:w-[500px] md:h-[400px] w-full w-[300px] h-[300px]" /></figure>
-                                    <div className="card-body bg-white ">
+                                    <figure><img src={country.photo} alt="spot" className="md:w-[500px] md:h-[400px] w-[300px] h-[300px]" /></figure>
+                                    <div className="card-body bg-base-100 ">
                                         <h2 className="card-title">{country.country}</h2>
                                         <p>{country.location}</p>
                                         <p>{country.description}</p>

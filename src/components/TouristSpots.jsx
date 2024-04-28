@@ -7,9 +7,9 @@ const TouristSpots = ({ spot }) => {
 
 
     return (
-        <div className="card card-side shadow-xl md:w-[500px] md:h-[400px] h-[300px] italic hover:scale-105 hover:cursor-pointe">
+        <div className="card card-side shadow-xl md:w-[500px] md:h-[400px] h-[300px] italic hover:scale-105 hover:cursor-pointer">
             <figure><img src={photo} alt="spot" className="md:w-[300px] md:h-[400px] w-[300px] h-[300px]" /></figure>
-            <div className="card-body bg-white ">
+            <div className="card-body bg-base-100">
                 <h2 className="card-title">{spotName}</h2>
                 <p>{location}</p>
                 <p>Average Cost: {cost}</p>
