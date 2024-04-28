@@ -41,7 +41,7 @@ const Update = () => {
 
         const updatedSpot = {spotName, country, location, cost, season, time, visitors, description, name, email, photo} ;
 
-        fetch(`http://localhost:5000/spots/${_id}`, {
+        fetch(`https://tourism-management-server-orpin.vercel.app/spots/${_id}`, {
             method: 'PUT', 
             headers: {
                 'content-type' : 'application/json'

@@ -18,7 +18,7 @@ const SpotDetails = () => {
         <div className="hero min-h-[60vh] mt-40 md:mt-20 bg-base-200">
             <Helmet><title>Spot Details</title></Helmet>
             <div className="hero-content flex-col lg:flex-row">
-                <img src={photo} className="max-w-sm rounded-lg shadow-2xl" />
+                <img src={photo} className="max-w-sm rounded-lg  shadow-2xl" />
                 <div>
                     <h1 className="text-5xl font-bold italic">{spotName}</h1>
                     <h2 className="text-2xl italic" >{location} , {country} </h2>

@@ -22,17 +22,17 @@ export const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            loader: ()=> fetch('http://localhost:5000/spots')
+            loader: ()=> fetch('https://tourism-management-server-orpin.vercel.app/spots')
         },
         {
             path: '/all-spot',
             element: <AllTourist></AllTourist>,
-            loader: ()=> fetch('http://localhost:5000/spots')
+            loader: ()=> fetch('https://tourism-management-server-orpin.vercel.app/spots')
         },
         {
             path: '/my-list/:email',
             element: <PrivateRoute> <MyList></MyList></PrivateRoute>,
-            loader: ({params})=> fetch(`http://localhost:5000/email/${params.email}`) 
+            loader: ({params})=> fetch(`https://tourism-management-server-orpin.vercel.app/email/${params.email}`) 
         },
         {
             path: '/add-spot',
@@ -49,18 +49,18 @@ export const router = createBrowserRouter([
         {
             path: '/details/:id',
             element: <PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>,
-            loader: ()=> fetch('http://localhost:5000/spots')
+            loader: ()=> fetch('https://tourism-management-server-orpin.vercel.app/spots')
         }, 
         {
             path: '/update/:id',
             element: <PrivateRoute><Update></Update></PrivateRoute>,
-            loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
+            loader: ({params})=> fetch(`https://tourism-management-server-orpin.vercel.app/spots/${params.id}`)
 
         },
         {
             path: '/countries/:country',
             element: <CountryDetails></CountryDetails>,
-            loader: ({params})=> fetch(`http://localhost:5000/country/${params.country}`)
+            loader: ({params})=> fetch(`https://tourism-management-server-orpin.vercel.app/country/${params.country}`)
         }
       ]
     },

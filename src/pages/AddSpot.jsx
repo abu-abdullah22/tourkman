@@ -29,7 +29,7 @@ const AddSpot = () => {
 
 
         //sending to the server
-        fetch('http://localhost:5000/spots', {
+        fetch('https://tourism-management-server-orpin.vercel.app/spots', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

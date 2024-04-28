@@ -7,10 +7,10 @@ const CountryDetails = () => {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/country/${country}`)
+        fetch(`https://tourism-management-server-orpin.vercel.app/country/${country}`)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Failed to fetch spots');
+                    throw new Error('Failed to fetch countries');
                 }
                 return response.json();
             })
@@ -18,7 +18,7 @@ const CountryDetails = () => {
                 setCountries(data);
             })
             .catch(error => {
-                console.error('Error fetching spots:', error);
+                console.error('Error fetching countries:', error);
             });
     }, [country]);
 
