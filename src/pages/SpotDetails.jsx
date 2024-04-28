@@ -10,11 +10,11 @@ const SpotDetails = () => {
     // console.log(spots);
     const spot = spots.find(spot => spot._id === id);
     // console.log(spot);
-    const {spotName, country, location, cost, season, time, visitors, description, photo} = spot ;
+    const {spotName, country, location, cost, season, time, visitors, description, photo, name, email} = spot ;
 
 
     return (
-        <div className="hero min-h-[60vh] mt-40 md:mt-12 bg-base-200">
+        <div className="hero min-h-[60vh] mt-40 md:mt-20 bg-base-200">
             <div className="hero-content flex-col lg:flex-row">
                 <img src={photo} className="max-w-sm rounded-lg shadow-2xl" />
                 <div>
@@ -23,13 +23,17 @@ const SpotDetails = () => {
                     <p className="py-6">{description}</p>
 
                     <div className="flex gap-10">
-                        <p>Average Cost in USD: {cost} </p>
-                        <p>Time: {time}</p>
+                        <p><span className="font-bold">Average Cost in USD:</span> {cost} </p>
+                        <p><span className="font-bold">Time:</span> {time}</p>
                     </div>
 
-                    <div className="flex gap-10 mt-5">
-                        <p>Best time for visit : {season}</p>
-                        <p>Visitors per year: {visitors}</p>
+                    <div className="flex gap-10 mt-5 my-8">
+                        <p><span className="font-bold">Best time for visit :</span> {season}</p>
+                        <p><span className="font-bold">Visitors per year: </span>{visitors}</p>
+                    </div>
+                    <div>
+                        <p> <span className="font-bold"> Added by </span>: <span >{name}</span></p>
+                        <p ><span className="font-bold">Email</span>: {email}</p>
                     </div>
                 </div>
             </div>

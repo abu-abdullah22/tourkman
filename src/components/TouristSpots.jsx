@@ -12,7 +12,7 @@ const TouristSpots = ({ spot }) => {
             <div className="card-body bg-base-100">
                 <h2 className="card-title">{spotName}</h2>
                 <p>{location}</p>
-                <p>Average Cost: {cost}</p>
+                <p>Average Cost in USD: {cost}</p>
                 <p>{time}</p>
                 <div className="card-actions">
                    <Link to={`/details/${_id}`}>  <button  className="btn bg-[#79A79A] hover:bg-[#80665F] text-white">View Details</button></Link>
