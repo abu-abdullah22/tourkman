@@ -22,23 +22,23 @@ const CountryDetails = () => {
     }, [country]);
 
     return (
-        <div className="my-8 mx-4">
+        <div className="my-8 mx-4 lg:h-[70vh]">
             {countries.length > 0 ? (
                 <div>
                     <h2 className="text-4xl text-center my-12 italic">Spots By Country</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10 mx-auto">
                         {countries.map(country => (
                             <div key={country._id}>
                                 <div className="card card-side shadow-xl h-full hover:scale-105 hover:cursor-pointer">
                                     <figure>
-                                        <img src={country.photo} alt="spot" className="w-full h-64 object-cover" />
+                                        <img src={country.photo} alt="spot" className="w-full h-[500px] object-cover" />
                                     </figure>
                                     <div className="card-body bg-base-100 p-4">
-                                        <h2 className="card-title text-lg font-semibold mb-2">{country.country}</h2>
-                                        <p className="mb-2">{country.location}</p>
+                                        <h2 className="card-title text-lg font-semibold mb-2"> {country.spotName}</h2>
+                                        <p className="mb-2 font-bold">{country.location}, {country.country}</p>
                                         <p className="mb-2">{country.description}</p>
-                                        <p className="mb-2">Cost in USD: {country.cost}</p>
-                                        <p className="mb-2">Best time for visit: {country.season}</p>
+                                        <p className="mb-2"><span className="font-bold">Cost : </span> $ {country.cost}</p>
+                                        <p className="mb-2"><span className="font-bold">Best time for visit :</span> {country.season}</p>
                                         <div className="card-actions">
                                             <Link to={`/details/${country._id}`}>
                                                 <button className="btn bg-[#79A79A] hover:bg-[#80665F] text-white">View Details</button>
