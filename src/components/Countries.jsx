@@ -23,7 +23,7 @@ const Countries = () => {
                     countries.map(country => (
                         <div key={country._id}>
                              <div className="card card-side shadow-xl md:w-[500px] md:h-[400px] h-[300px] italic hover:scale-105 hover:cursor-pointer">
-            <figure><img src={country.flag_url} alt="spot" className="md:w-full md:h-full w-[300px] h-[300px]" /></figure>
+            <figure><img src={country.flag_url} alt="spot" className="md:w-full md:h-full w-[300px] h-[300px] object-cover" /></figure>
             <div className="card-body bg-base-100">
                 <h2 className="card-title">{country.country_name}</h2>
                 <p>{country.description}</p>
