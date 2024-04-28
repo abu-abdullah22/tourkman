@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import TouristSpots from "../components/TouristSpots";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 
 const AllTourist = () => {
@@ -25,6 +26,7 @@ const AllTourist = () => {
     }
     return (
         <div>
+            <Helmet><title>All Tourist Spot</title></Helmet>
             <h2 className="text-4xl text-center my-12 italic">All Tourist Spots </h2>
             <details className="dropdown mt-12">
                 <summary className="m-1 btn bg-[#5489C8] text-white hover:bg-[#E46D30]">Sort By: {sortOption === 'cost' ? 'Cost' : 'Default'}</summary>

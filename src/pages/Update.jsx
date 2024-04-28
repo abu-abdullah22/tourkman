@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
 import 'react-tooltip/dist/react-tooltip.css'
 import { Tooltip } from 'react-tooltip'
+import { Helmet } from "react-helmet";
 
 
 const Update = () => {
@@ -65,6 +66,7 @@ const Update = () => {
 
     return (
         <div className="my-12">
+            <Helmet>Update</Helmet>
             <h2 className="text-4xl text-center my-12 italic">Update Spot Informations</h2>
             <form className=" p-5" onSubmit={handleUpdate}>
                 {/* spot and country */}

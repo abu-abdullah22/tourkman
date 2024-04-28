@@ -3,6 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import Swal from 'sweetalert2'
 import 'react-tooltip/dist/react-tooltip.css'
 import { Tooltip } from 'react-tooltip'
+import { Helmet } from "react-helmet";
 
 const AddSpot = () => {
     const { user } = useContext(AuthContext);
@@ -59,6 +60,7 @@ const AddSpot = () => {
 
     return (
         <div className="my-12">
+            <Helmet><title>Add Spot</title></Helmet>
             <h2 className="text-4xl text-center my-12 italic">Add a new spot </h2>
             <form className="p-5" onSubmit={handleAddSpot}>
                 {/* spot and country */}

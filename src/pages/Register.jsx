@@ -3,6 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import 'animate.css';
+import { Helmet } from "react-helmet";
 
 const Register = () => {
     const [error, setError] = useState('') ;
@@ -53,7 +54,7 @@ const Register = () => {
       }   
     return (
         <div className="bg-[url('/public/register.jpg')] rounded-lg my-4">
-    
+            <Helmet>Register</Helmet>
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col">
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 bg-[#EEF0F8] animate__animated animate__backInUp">

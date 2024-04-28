@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const SpotDetails = () => {
@@ -15,6 +16,7 @@ const SpotDetails = () => {
 
     return (
         <div className="hero min-h-[60vh] mt-40 md:mt-20 bg-base-200">
+            <Helmet><title>Spot Details</title></Helmet>
             <div className="hero-content flex-col lg:flex-row">
                 <img src={photo} className="max-w-sm rounded-lg shadow-2xl" />
                 <div>

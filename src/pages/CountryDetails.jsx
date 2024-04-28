@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
 
 const CountryDetails = () => {
@@ -23,6 +24,7 @@ const CountryDetails = () => {
 
     return (
         <div className="my-8 mx-4 lg:h-[70vh]">
+            <Helmet><title>Country Details</title></Helmet>
             {countries.length > 0 ? (
                 <div>
                     <h2 className="text-4xl text-center my-12 italic">Spots By Country</h2>

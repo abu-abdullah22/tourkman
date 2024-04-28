@@ -4,6 +4,7 @@ import TouristSpots from "../components/TouristSpots";
 import Faq from "../components/Faq";
 import Countries from "../components/Countries";
 import Subscribe from "../components/Subscribe";
+import { Helmet } from "react-helmet";
 
 
 
@@ -11,6 +12,7 @@ const Home = () => {
     const spots = useLoaderData();
     return (
         <div>
+            <Helmet><title>Home</title></Helmet>
             <div>
                 <Banner></Banner>
             </div>

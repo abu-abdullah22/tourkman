@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import 'animate.css';
+import { Helmet } from "react-helmet";
 
 const Login = () => {
     const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
@@ -65,6 +66,7 @@ const Login = () => {
     }
     return (
         <div className="bg-[url('/public/login.jpg')] bg-cover bg-center rounded-lg my-4">
+           <Helmet><title>Login </title></Helmet>
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col">
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100  animate__animated animate__backInDown bg-[#EEF0F8]">
