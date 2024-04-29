@@ -1,10 +1,12 @@
-# Tourkman - Central Asia Tourism Management
+# Tourkman 
 
-Welcome to Tourkman, your gateway to exploring the wonders of Central Asia! Whether you're a seasoned traveler or embarking on your first adventure, our platform is designed to provide you with an immersive and user-friendly experience. Visit our live site [here](https://tourism-management-ba713.web.app/).
+**Central Asia Based Tourism Management**
+
+Visit our live site [here](https://tourism-management-ba713.web.app/).
 
 ### Key Features:
 
-- **Engaging Animations:** Immerse yourself in stunning visuals and dynamic animations that bring the beauty and vibrancy of Central Asia to life. From animated maps showcasing popular destinations to interactive elements that capture the essence of each location, our animations enhance your browsing experience and ignite your wanderlust.
+- **Engaging Images:** Immerse yourself in stunning visuals and dynamic Images that bring the beauty and vibrancy of Central Asia to life. From animated maps showcasing popular destinations to interactive elements that capture the essence of each location, our images enhance your browsing experience and ignite your wanderlust.
 
 - **Sleek UI Design:** Navigate our platform with ease thanks to our sleek and intuitive user interface. Whether you're browsing itineraries, searching for travel tips, or connecting with fellow adventurers, our UI ensures a seamless and enjoyable experience from start to finish.
 
