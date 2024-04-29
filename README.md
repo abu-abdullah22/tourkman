@@ -14,7 +14,7 @@ Visit our live site [here](https://tourism-management-ba713.web.app/).
 
 - **User-Generated Content:** Contribute to our community by adding your own favorite spots and hidden gems to our interactive map. Share your travel experiences, insider tips, and must-visit destinations with fellow travelers, enriching the collective knowledge and inspiring others to explore Central Asia off the beaten path.
 
-- **Lottie React Subscription Animation:** Experience seamless subscription interactions with captivating Lottie animations. Our subscription section comes to life with vibrant visuals and fluid motion, making the signup process not only functional but also delightful.
+- **FAQ Section** Explore answers to commonly asked questions about traveling to Central Asia, covering topics such as visa requirements, cultural customs, popular destinations, and more.
 
 ### Packages Used:
 - **[React Tooltip](https://www.npmjs.com/package/react-tooltip):** Adds interactive tooltips to our UI elements, enhancing usability and providing additional context or information to users.
