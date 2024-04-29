@@ -53,7 +53,7 @@ const Register = () => {
        
       }   
     return (
-        <div className="bg-[url('/public/register.jpg')] rounded-lg my-4">
+        <div className="bg-[url('/register.jpg')] rounded-lg my-4">
             <Helmet>Register</Helmet>
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col">

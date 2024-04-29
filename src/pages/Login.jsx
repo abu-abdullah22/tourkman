@@ -65,7 +65,7 @@ const Login = () => {
             })
     }
     return (
-        <div className="bg-[url('/public/login.jpg')] bg-cover bg-center rounded-lg my-4">
+        <div className="bg-[url('/login.jpg')] bg-cover bg-center rounded-lg my-4">
            <Helmet><title>Login </title></Helmet>
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col">

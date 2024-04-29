@@ -26,7 +26,7 @@ const Home = () => {
             <div className="my-20">
            <Faq></Faq>
             </div>
-            <div>
+            <div className="mx-2">
                 <Countries></Countries>
             </div>
             <div>

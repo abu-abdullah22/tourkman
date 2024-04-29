@@ -76,7 +76,7 @@ const Update = () => {
                             <span className="label-text">Spot Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" defaultValue={spotName} name="spotName" placeholder="Spot Name" className="input input-bordered md:w-full" />
+                            <input type="text" defaultValue={spotName} name="spotName" placeholder="Spot Name" className="input input-bordered md:w-full" required />
                         </label>
 
                     </div>
@@ -85,7 +85,7 @@ const Update = () => {
                             <span className="label-text">Country</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" defaultValue={country} name="country" placeholder="Country" className="input input-bordered w-full" />
+                            <input type="text" defaultValue={country} name="country" placeholder="Country" className="input input-bordered w-full" required />
                         </label>
 
                     </div>
@@ -98,7 +98,7 @@ const Update = () => {
                             <span className="label-text">Location</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="location" placeholder="Location" defaultValue={location} className="input input-bordered w-full" />
+                            <input type="text" name="location" placeholder="Location" defaultValue={location} className="input input-bordered w-full" required />
                         </label>
 
                     </div>
@@ -107,7 +107,7 @@ const Update = () => {
                             <span className="label-text">Average Cost</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="cost" placeholder="Cost" defaultValue={cost} className="input input-bordered w-full" />
+                            <input type="text" name="cost" placeholder="Cost" defaultValue={cost} className="input input-bordered w-full" required />
                         </label>
 
                     </div>
@@ -119,7 +119,7 @@ const Update = () => {
                             <span className="label-text">Season</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="season" placeholder="Summer/Winter" defaultValue={season} className="input input-bordered w-full" />
+                            <input type="text" name="season" placeholder="Summer/Winter" defaultValue={season} className="input input-bordered w-full" required />
                         </label>
 
                     </div>
@@ -128,7 +128,7 @@ const Update = () => {
                             <span className="label-text">Time</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" defaultValue={time} name="time" placeholder="7 days" className="input input-bordered w-full" />
+                            <input type="text" defaultValue={time} name="time" placeholder="7 days" className="input input-bordered w-full" required />
                         </label>
 
                     </div>
@@ -141,7 +141,7 @@ const Update = () => {
                             <span className="label-text">Total Visitors Per Year </span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="visitors" placeholder="10,000" defaultValue={visitors} className="input input-bordered w-full" />
+                            <input type="text" name="visitors" placeholder="10,000" defaultValue={visitors} className="input input-bordered w-full" required />
                         </label>
 
                     </div>
@@ -150,7 +150,7 @@ const Update = () => {
                             <span className="label-text">Short Description</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="description" placeholder="Description" defaultValue={description} className="input input-bordered w-full" />
+                            <input type="text" name="description" placeholder="Description" defaultValue={description} className="input input-bordered w-full" required />
                         </label>
 
                     </div>
@@ -186,7 +186,7 @@ const Update = () => {
                             <span className="label-text">Photo </span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="photo" placeholder="Photo URL" defaultValue={photo} className="input input-bordered w-full" />
+                            <input type="text" name="photo" placeholder="Photo URL" defaultValue={photo} className="input input-bordered w-full" required />
                         </label>
 
                     </div>

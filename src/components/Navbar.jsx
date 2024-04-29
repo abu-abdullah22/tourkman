@@ -65,7 +65,7 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <Link to={'/'} className="btn bg-[#79A79A] text-white text-3xl hover:bg-[#80665F] italic">TourkMan</Link>
+                <Link to={'/'} className="btn bg-[#79A79A] text-white md:text-3xl text-xl hover:bg-[#80665F] italic">TourkMan</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
