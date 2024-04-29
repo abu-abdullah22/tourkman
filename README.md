@@ -1,8 +1,6 @@
-# Tourkman 
+# [Tourkman](https://tourism-management-ba713.web.app/) 
 
 **Central Asia Based Tourism Management**
-
-Visit our live site [here](https://tourism-management-ba713.web.app/).
 
 ### Key Features:
 
