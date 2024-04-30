@@ -11,7 +11,7 @@ const Countries = () => {
             // console.log(data);
             setCountries(data) ;
         })
-    })
+    },[])
     return (
         <div>
             <div>

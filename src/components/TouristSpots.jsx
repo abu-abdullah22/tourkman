@@ -15,7 +15,7 @@ const TouristSpots = ({ spot }) => {
                 <p><span className="font-bold"> Average Cost :</span> $ {cost}</p>
                 <p><span className="font-bold">For :</span> {time}</p>
                 <div className="card-actions">
-                   <Link to={`/details/${_id}`}>  <button  className="btn bg-[#79A79A] hover:bg-[#80665F] text-white">View Details</button></Link>
+                   <Link to={`/details/${_id}`}>  <button  className="btn bg-[#79A79A] hover:bg-[#80665F] text-white text-sm">View Details</button></Link>
                 </div>
             </div>
         </div>

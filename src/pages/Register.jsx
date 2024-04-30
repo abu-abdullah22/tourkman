@@ -4,54 +4,56 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import 'animate.css';
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 
 const Register = () => {
-    const [error, setError] = useState('') ;
-    const [show, setShow] = useState(false) ;
-  
-    const { createUser, updateUser, setUser} = useContext(AuthContext);
+    const [error, setError] = useState('');
+    const [show, setShow] = useState(false);
+
+    const { createUser, updateUser, setUser } = useContext(AuthContext);
     const handleRegister = e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         const Name = e.target.name.value;
         const Photo = e.target.photo.value;
-    
-        if(password.length< 6 ){
-          setError('Password must be 6 characters')
-          return
-        } else if(!/[a-z]/.test(password)){
-          setError('Password must contain a lower letter')
-          return 
-        } else if(!/[A-Z]/.test(password)){
-          setError('Password must contain an uppercase letter')
-          return
+
+        if (password.length < 6) {
+            setError('Password must be 6 characters')
+            return
+        } else if (!/[a-z]/.test(password)) {
+            setError('Password must contain a lower letter')
+            return
+        } else if (!/[A-Z]/.test(password)) {
+            setError('Password must contain an uppercase letter')
+            return
         }
-    
+
         setError('')
-    
+
         //create User 
         createUser(email, password)
-          .then((result)=> {
-            console.log(result.user);
-            updateUser(Name, Photo)
-            .then(()=> {
-              setUser({displayName: Name, photoURL: Photo}) ;
-            }) 
-            .catch(error=>{
-             console.log('Registration Failed',error);
+            .then((result) => {
+                console.log(result.user);
+                updateUser(Name, Photo)
+                    .then(() => {
+                        toast.success('Account Created Successfully');
+                        setUser({ displayName: Name, photoURL: Photo });
+                    })
+                    .catch(error => {
+                        console.log('Registration Failed', error);
+                    })
             })
-        }) 
-        .catch(error=> {
-          console.log('Registration Failed', error);
-        })
-        e.target.email.value = '' ;
-        e.target.name.value = '' ;
-        e.target.password.value = '' ;
-        e.target.photo.value = '' ;
-    
-       
-      }   
+            .catch(error => {
+                console.log('Registration Failed', error);
+            })
+        e.target.email.value = '';
+        e.target.name.value = '';
+        e.target.password.value = '';
+        e.target.photo.value = '';
+
+
+    }
     return (
         <div className="bg-[url('/register.jpg')] rounded-lg my-4">
             <Helmet>Register</Helmet>
