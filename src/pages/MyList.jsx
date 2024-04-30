@@ -63,7 +63,7 @@ const MyList = () => {
     }
 
     return (
-      <div className="h-[70vh] my-20">
+      <div className="my-20">
         <Helmet><title>My List</title></Helmet>
         <h2 className="text-4xl text-center my-12 italic">My List </h2>
           <div className="overflow-x-auto">
