@@ -14,14 +14,19 @@ const AllTourist = () => {
     }, [defaultSpots]);
 
     const handleSortSpot = (option) => {
-        if (option === 'cost') {
-            const sortedData = defaultSpots.slice().sort((a, b) => b.cost - a.cost);
-            SetSortedSpots(sortedData);
+        let sortedData = [];
+        switch (option) {
+            case 'cost':
+                sortedData = defaultSpots.slice().sort((a, b) => a.cost - b.cost);
+                break;
+            case 'cost-desc':
+                sortedData = defaultSpots.slice().sort((a, b) => b.cost - a.cost);
+                break;
+            default:
+                sortedData = defaultSpots;
+                break;
         }
-        else {
-            SetSortedSpots(defaultSpots);
-        }
-
+        SetSortedSpots(sortedData);
         setSortOption(option);
     }
     return (
@@ -29,13 +34,16 @@ const AllTourist = () => {
             <Helmet><title>All Tourist Spot</title></Helmet>
             <h2 className="text-4xl text-center my-12 italic">All Tourist Spots </h2>
             <details className="dropdown mt-12">
-                <summary className="m-1 btn bg-[#5489C8] text-white hover:bg-[#E46D30]">Sort By: {sortOption === 'cost' ? 'Cost' : 'Default'}</summary>
+                <summary className="m-1 btn bg-[#5489C8] text-white hover:bg-[#E46D30]"> {sortOption === 'cost' ? 'Cost' : 'Default'}</summary>
                 <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                    <li>
+                <li>
                         <button onClick={() => handleSortSpot('default')}>Default</button>
                     </li>
                     <li>
-                        <button onClick={() => handleSortSpot('cost')}>Cost</button>
+                        <button onClick={() => handleSortSpot('cost')}>Cost (Low to High)</button>
+                    </li>
+                    <li>
+                        <button onClick={() => handleSortSpot('cost-desc')}>Cost (High to Low)</button>
                     </li>
                 </ul>
             </details>
