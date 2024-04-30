@@ -25,7 +25,7 @@ const SpotDetails = () => {
                     <p className="py-6">{description}</p>
 
                     <div className="flex gap-10">
-                        <p><span className="font-bold">Average Cost in USD:</span> {cost} </p>
+                        <p><span className="font-bold">Average Cost :</span> $ {cost} </p>
                         <p><span className="font-bold">Time:</span> {time}</p>
                     </div>
 

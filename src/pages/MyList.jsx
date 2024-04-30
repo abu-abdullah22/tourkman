@@ -87,7 +87,7 @@ const MyList = () => {
                                 <th>{spot.spotName}</th>
                                 <td>{spot.location}, {spot.country}</td>
                                 <td>{spot.time}</td>
-                                <td>{spot.cost}</td>
+                                <td> $ {spot.cost}</td>
                                 <td>
                                     <Link to={`/update/${spot._id}`}> <button className="btn">Update</button></Link>
                                 </td>
