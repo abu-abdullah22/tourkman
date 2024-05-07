@@ -40,7 +40,7 @@ const MyList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://tourism-management-server-orpin.vercel.app/email/${email}`, {
+                fetch(`https://tourism-management-server-orpin.vercel.app/spots/email/${email}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
