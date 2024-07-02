@@ -12,25 +12,23 @@
 
 ### Key Features:
 
-- **Engaging Images:** Immerse yourself in stunning visuals and dynamic Images that bring the beauty and vibrancy of Central Asia to life. From animated maps showcasing popular destinations to interactive elements that capture the essence of each location, our images enhance your browsing experience and ignite your wanderlust.
+- **Login and Subscription System:** Create a personalized account to unlock exclusive features and tailor your experience to your preferences. With our secure login system, you can access saved itineraries, bookmark favorite spots, and receive personalized recommendations based on your interests.
 
 - **Sleek UI Design:** Navigate our platform with ease thanks to our sleek and intuitive user interface. Whether you're browsing itineraries, searching for travel tips, or connecting with fellow adventurers, our UI ensures a seamless and enjoyable experience from start to finish.
 
-- **Login and Subscription System:** Create a personalized account to unlock exclusive features and tailor your experience to your preferences. With our secure login system, you can access saved itineraries, bookmark favorite spots, and receive personalized recommendations based on your interests. Plus, subscribe to our newsletter to stay updated on the latest travel trends, deals, and insider tips.
-
 - **User-Generated Content:** Contribute to our community by adding your own favorite spots and hidden gems to our interactive map. Share your travel experiences, insider tips, and must-visit destinations with fellow travelers, enriching the collective knowledge and inspiring others to explore Central Asia off the beaten path.
 
-- **FAQ Section** Explore answers to commonly asked questions about traveling to Central Asia, covering topics such as visa requirements, cultural customs, popular destinations, and more.
+
 
 ### Packages Used:
-- **[React Tooltip](https://www.npmjs.com/package/react-tooltip):** Adds interactive tooltips to our UI elements, enhancing usability and providing additional context or information to users.
-- **[Lottie React](https://github.com/airbnb/lottie-react):** Integrates Lottie animations seamlessly into our React components, allowing for engaging and dynamic visual elements.
-- **[Animate.css](https://animate.style/):** A library of ready-to-use CSS animations to enhance the visual appeal of our website.
-- **[React Router DOM](https://reactrouter.com/):** Facilitates navigation and routing within our single-page application, ensuring smooth transitions between different views and pages.
-- **[React Icons](https://react-icons.github.io/react-icons/):** Provides a collection of customizable icons for our UI elements, enhancing visual consistency and usability.
-- **[React Toastify](https://github.com/fkhadra/react-toastify):** Displays toast notifications to provide feedback and alerts to users, improving the overall user experience by communicating important information in a non-intrusive manner.
-- **[SweetAlert2](https://sweetalert2.github.io/):** Displays customizable popup modals for alerts, notifications, and confirmations, improving the user experience by providing clear and visually appealing feedback.
-- **[Swiper](https://swiperjs.com/):** Enables touch-friendly, responsive sliders and carousels for showcasing images and content, enhancing the visual presentation of our website.
+- **[React Tooltip](https://www.npmjs.com/package/react-tooltip)**
+- **[Lottie React](https://github.com/airbnb/lottie-react)** 
+- **[Animate.css](https://animate.style/)** 
+- **[React Router DOM](https://reactrouter.com/)** 
+- **[React Icons](https://react-icons.github.io/react-icons/)** 
+- **[React Toastify](https://github.com/fkhadra/react-toastify)** 
+- **[SweetAlert2](https://sweetalert2.github.io/)** 
+- **[Swiper](https://swiperjs.com/)** 
 
 
 
