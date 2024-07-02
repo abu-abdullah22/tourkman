@@ -2,6 +2,14 @@
 
 **Central Asia Based Tourism Management**
 
+**Technology Used**:
+- React JS
+- Tailwind CSS with DaisyUI 
+- Firebase
+- Express JS
+- MongoDB
+
+
 ### Key Features:
 
 - **Engaging Images:** Immerse yourself in stunning visuals and dynamic Images that bring the beauty and vibrancy of Central Asia to life. From animated maps showcasing popular destinations to interactive elements that capture the essence of each location, our images enhance your browsing experience and ignite your wanderlust.
@@ -23,3 +31,20 @@
 - **[React Toastify](https://github.com/fkhadra/react-toastify):** Displays toast notifications to provide feedback and alerts to users, improving the overall user experience by communicating important information in a non-intrusive manner.
 - **[SweetAlert2](https://sweetalert2.github.io/):** Displays customizable popup modals for alerts, notifications, and confirmations, improving the user experience by providing clear and visually appealing feedback.
 - **[Swiper](https://swiperjs.com/):** Enables touch-friendly, responsive sliders and carousels for showcasing images and content, enhancing the visual presentation of our website.
+
+
+
+## Running the Project Locally
+
+To run the project locally, follow these steps:
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/newswave.git
+   cd newswave
+2. **Install npm**
+   ```bash
+   npm install
+3. **Run locally** 
+   ```bash
+   npm run dev
