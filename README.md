@@ -1,4 +1,4 @@
-# [Tourkman](https://tourism-management-ba713.web.app/](https://tourkman.netlify.app/) 
+# [Tourkman](https://tourkman.netlify.app/) 
 
 **Central Asia Based Tourism Management**
 
